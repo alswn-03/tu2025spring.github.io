@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+
+body {
+  /* abhaya-libre-extrabold */
+  font-family: "Abhaya Libre", serif;
+  /* font-weight: 800;
+    font-style: normal; */
+  background: #fdfbd4;
+}
+#poster {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(5px);
+}
+#blur-poster {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(5px);
+  filter: blur(7.5px);
+  width: 375px;
+}
+
+/* header */
+header {
+  display: flex;
+  height: 60px;
+  align-items: center; /* 수직(상하) 중앙 정렬 */
+  padding: 0px;
+  background-color: #a92717;
+  justify-content: space-between;
+}
+.header-title {
+  display: flex;
+  align-items: center; /* 내부 요소들(이미지, 텍스트) 수직 중앙 정렬 */
+  margin-left: 23px; /* 왼쪽에서 30px 간격 */
+
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  color: #fdfbd4;
+}
+.header-title img {
+  height: 54px; /* 로고 크기 조절 */
+}
+.navbar-toggler {
+  padding: 0px;
+  margin-right: 16px; /* 오른쪽 버튼 간격 */
+}
+#ham-icon {
+  height: 24px;
+}
+
+/* navbar */
+.navbar {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.5);
+  flex-direction: row-reverse;
+  display: none;
+}
+#x-icon {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  height: 32px;
+}
+
+.nav-container {
+  width: 217px;
+  padding: 0px 0px 0px 33px; /* 윗쪽, 오른쪽, 아래쪽, 왼쪽 */
+  height: 100vh;
+  background-color: #a92717;
+  display: block;
+}
+.nav-item {
+  color: #fdfbd4;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-decoration: none; /* 밑줄 X */
+}
+
+main {
+  position: absolute;
+  top: 60px;
+  bottom: 50px;
+  width: 100vw;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  position: fixed; /* 페이지를 스크롤해도 하단에 고정 */
+  bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  background-color: #a92717;
+  font-size: 9px;
+  color: #fdfbd4;
+}
+footer > p {
+  margin: 0;
+}
