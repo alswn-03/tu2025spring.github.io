@@ -1,14 +1,162 @@
-.alert-box {
-    background-color: skyblue;
-    padding: 20px;
-    color: black;
-    border-radius: 5px;
-    display: none;
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "Hakgyo R";
+  src: url(../TU-2025-Spring/fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
+    format("opentype");
 }
 
-.list-group {
-    display: none
+body {
+  /* abhaya-libre-extrabold */
+  font-family: "Abhaya Libre", serif;
+  /* font-weight: 800;
+    font-style: normal; */
+  background: #fffdd4;
 }
-.show {
-    display: block
+#poster {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95vw;
+  max-height: calc(100vh - 110px);
+  transform: translate(-50%, -50%) translateY(5px);
+  z-index: -1;
+}
+#blur-poster {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95vw;
+  max-height: calc(100vh - 110px);
+  transform: translate(-50%, -50%) translateY(5px);
+  filter: blur(7.5px);
+  z-index: -1;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center; /* 수직(상하) 중앙 정렬 */
+  padding: 0px;
+  background-color: #df253a;
+  justify-content: space-between;
+}
+.header-title {
+  display: flex;
+  align-items: center; /* 내부 요소들(이미지, 텍스트) 수직 중앙 정렬 */
+  margin-left: 23px; /* 왼쪽에서 30px 간격 */
+
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  color: #fffdd4;
+}
+.header-title img {
+  height: 54px; /* 로고 크기 조절 */
+}
+.navbar-toggler {
+  padding: 0px;
+  margin-right: 16px; /* 오른쪽 버튼 간격 */
+}
+#ham-icon {
+  height: 24px;
+}
+
+/* navbar */
+.navbar {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.5);
+  flex-direction: row-reverse;
+  display: none;
+}
+#x-icon {
+  position: relative;
+  top: 14px;
+  left: 169px;
+  height: 32px;
+}
+
+.nav-container {
+  width: 250px;
+  padding: 0px 0px 0px 33px; /* 윗쪽, 오른쪽, 아래쪽, 왼쪽 */
+  height: 100vh;
+  background-color: #df253a;
+  display: grid;
+  grid-template-rows: 52px 35px 35px 35px 35px auto;
+  row-gap: 8px;
+}
+.nav-item {
+  color: #fffdd4;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-decoration: none; /* 밑줄 X */
+}
+.nav-emoji-container {
+  padding: 0%;
+  margin: 0%;
+  width: 217px;
+  height: 30px;
+  position: fixed;
+  bottom: 24px;
+
+  display: flex;
+}
+.nav-icon {
+  margin: 0px;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+main {
+  position: absolute;
+  top: 60px;
+  bottom: 50px;
+  width: 100vw;
+  height: calc(100vh - 110px); /* 전체 높이에서 header(60px) + footer(50px) 제외 */
+  /*overflow: auto;   main 내부만 스크롤 가능 */
+}
+
+footer {
+  display: flex;
+  margin: 0px;
+  width: 100%;
+  height: 50px;
+  position: fixed; /* 페이지를 스크롤해도 하단에 고정 */
+  bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  background-color: #df253a;
+  font-size: 9px;
+  color: #fffdd4;
+}
+footer > p {
+  margin: 0;
+}
+
+
+
+/* nav-item 클릭 시 색상 변화 방지 (강제 적용) */
+.nav-item:focus,
+.nav-item:active,
+.nav-item:visited {
+  color: #fdfbd4 !important; /* 기존 색상 유지 */
+  outline: none !important; /* 클릭 시 테두리 제거 */
 }
