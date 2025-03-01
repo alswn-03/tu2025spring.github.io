@@ -17,16 +17,20 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 375px;
+  width: 95vw;
+  max-height: calc(100vh - 110px);
   transform: translate(-50%, -50%) translateY(5px);
+  z-index: -1;
 }
 #blur-poster {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 375px;
+  width: 95vw;
+  max-height: calc(100vh - 110px);
   transform: translate(-50%, -50%) translateY(5px);
   filter: blur(7.5px);
+  z-index: -1;
 }
 
 /* header */
