@@ -16,7 +16,6 @@ main {
 }
 
 
-
 .members-description > h3 {
   padding-top: 20px;
   padding-bottom: 12px;
@@ -30,7 +29,7 @@ main {
 .members-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(18vh, 18vh);
+  grid-auto-rows: minmax(16vh, 16vh);
   
 }
 
@@ -54,6 +53,7 @@ main {
 }
 
 .member-info {
+    font-weight: 800;
     margin-bottom: 4px;
     margin-top: 1px;
 }
