@@ -42,8 +42,14 @@
       </div> 
     </nav> 
     
+      
     <main>
-
+      <div class="members-description">
+        <h3>열심히 무대를 준비한 공연진들을 소개합니다.</h3>
+      </div>
+      <div class="members-container">
+        
+      </div>
 
 
     </main>
@@ -60,7 +66,44 @@
         console.log("Pressed")
         document.getElementsByClassName('navbar')[0].style.display='flex';
       })
-  </script>
+
+      const MembersData = [
+        { name : "성연우", type : "연출진", comment : "안녕하세요! 연출진 성연우입니다. 이번 공연을 통해 여러분들에게 즐거움을" },
+        { name : "김민지", type : "보컬", comment : "안녕하세요! 보컬 김민지입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!" },
+        { name : "김민수", type : "보컬", comment : "안녕하세요! 보컬 김민수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!" },
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!" },
+        { name : "박지훈", type : "댄서", comment : "안녕하세요! 댄서 박지훈입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!" },
+        { name : "김지원", type : "댄서", comment : "안녕하세요! 댄서 김지원입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!" },
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+        { name : "이지수", type : "댄서", comment : "안녕하세요! 댄서 이지수입니다. 이번 공연을 통해 여러분들에게 즐거움을 드리고 싶습니다. 기대해주세요!"},
+
+      ]
+
+      const membersContainer = document.getElementsByClassName('members-container')[0];
+
+      function MapMembersData(){
+        membersContainer.innerHTML = '';
+        MembersData.map((member) => {
+          const memberCard = document.createElement('div');
+          memberCard.className = 'members-card';
+          memberCard.innerHTML = `
+              <p class = "member-info">${member.type} ${member.name}</p>
+              <p class = "member-comment">${member.comment}</p>
+          `
+          membersContainer.appendChild(memberCard);
+        })
+      }
+
+      MapMembersData();
+     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>

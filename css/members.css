@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Hakgyo R";
+    src: url(../TU-2025-Spring/fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
+      format("opentype");
+  }
+
+
+main {
+  position: fixed;
+  top: 60px;
+  overflow-x: scroll;
+}
+
+#blur-poster{
+  filter: sepia(50%) blur(10px);
+}
+
+
+
+.members-description > h3 {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  font-family: "Hangyo-R";
+  text-align: center;
+  font-size: 16px;
+  
+}
+
+
+.members-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(18vh, 18vh);
+  
+}
+
+.members-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font: 12px "Hangyo-R";
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
+    border: 2px solid #000;
+}
+
+.member-comment {
+    margin-bottom: 2px;
+    height: 85%;
+    overflow: hidden;
+}
+
+.member-info {
+    margin-bottom: 4px;
+    margin-top: 1px;
+}
