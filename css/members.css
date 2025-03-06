@@ -1,9 +1,10 @@
 @font-face {
     font-family: "Hakgyo R";
-    src: url(../TU-2025-Spring/fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
+    src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
       format("opentype");
   }
 
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Hahmlet:wght@100..900&display=swap');
 
 main {
   position: fixed;
@@ -12,48 +13,67 @@ main {
 }
 
 #blur-poster{
-  filter: sepia(50%) blur(10px);
+  filter: sepia(50%) blur(15px);
 }
 
 
 .members-description > h3 {
+  margin: 0px;
   padding-top: 20px;
   padding-bottom: 12px;
   font-family: "Hangyo-R";
+  /* font-family: "Hahmlet";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; */
+
   text-align: center;
-  font-size: 16px;
-  
+  font-size: 13px;
 }
 
 
 .members-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(16vh, 16vh);
-  
+  margin-left: 9px;
+  margin-right: 9px;  
 }
 
 .members-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font: 12px "Hangyo-R";
-    padding: 12px;
+    height: 82px;
+    box-sizing: border-box;
+    padding: 10px;
     margin-top: 12px;
-    margin-bottom: 15px;
-    margin-left: 12px;
-    margin-right: 12px;
-    border: 2px solid #000;
+    margin-bottom: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #000; 
 }
 
+.member-name {
+  font: 13px "Hangyo-R";
+  /* font-family: "Hahmlet";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal; */
+
+  font-weight: 700;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
 .member-comment {
-    margin-bottom: 2px;
-    height: 85%;
-    overflow: hidden;
-}
+  font: 12px "Hangyo-R";
+  /* font-family: "Hahmlet";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; */
 
-.member-info {
-    font-weight: 800;
-    margin-bottom: 4px;
-    margin-top: 1px;
+  margin: 0px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
