@@ -1,8 +1,7 @@
 @font-face {
-    font-family: "Hakgyo R";
-    src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
-      format("opentype");
-  }
+  font-family: "Hakgyo R";
+  src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf) format("opentype");
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Hahmlet:wght@100..900&display=swap');
 
@@ -21,7 +20,7 @@ main {
   margin: 0px;
   padding-top: 20px;
   padding-bottom: 12px;
-  font-family: "Hangyo-R";
+  font-family: "Hakgyo R";
   /* font-family: "Hahmlet";
   font-optical-sizing: auto;
   font-weight: 400;
@@ -54,23 +53,16 @@ main {
 }
 
 .member-name {
-  font: 13px "Hangyo-R";
-  /* font-family: "Hahmlet";
-  font-optical-sizing: auto;
+  font: 12.5px "Hakgyo R";
   font-weight: 700;
-  font-style: normal; */
-
-  font-weight: 700;
-  margin-bottom: 3px;
-  margin-top: 3px;
+  margin-left: 1px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  letter-spacing: 1px;
 }
 .member-comment {
-  font: 12px "Hangyo-R";
-  /* font-family: "Hahmlet";
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal; */
-
+  font: 11.5px "Hakgyo R";
+  letter-spacing: 1px;
   margin: 0px;
   height: 100%;
   overflow: hidden;
