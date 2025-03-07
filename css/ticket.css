@@ -6,6 +6,10 @@
     format("opentype");
 }
 
+/* #blur-poster{
+    filter: sepia(50%) blur(15px);
+} */
+
 .ticket-link {
     margin: 0 auto; /* 좌우 중앙 정렬 */
 
