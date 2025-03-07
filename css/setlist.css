@@ -13,9 +13,11 @@
 
 /* 스크롤 시 상단바 & 하단바를 침범하지 않도록 설정 */
 main {
-  position: absolute;
-  top: 60px; /* ✅ 상단바(헤더) 높이만큼 아래로 이동 */
-  bottom: 50px; /* ✅ 하단바(푸터) 높이만큼 위로 이동 */
+  position: fixed; /* ✅ 고정 위치 설정 */
+  top: 60px; /* ✅ 상단바 높이만큼 아래로 이동 */
+  bottom: 50px; /* ✅ 하단바 높이만큼 위로 이동 */
+  left: 0;
+  right: 0;
   width: 100%;
   overflow-y: auto; /* ✅ main 안에서만 스크롤 가능하도록 설정 */
 }
@@ -24,7 +26,7 @@ main {
 .setlist-description {
   text-align: center; /* 텍스트 중앙 정렬 */
   font-family: "Hakgyo R";
-  font-size: 10px; /* 글씨 크기 조정 */
+  font-size: 13px; /* 글씨 크기 조정 */
   color: black; /* 기존 빨간 계열 색상 */
   margin-top: 10px; /* 위쪽 빨간 바에서 10px 아래로 내림 */
   display: flex;
@@ -41,6 +43,7 @@ main {
   gap: 23px; /* 컬럼 간 간격 */
   max-width: 90vw; /* 전체 너비 조정 */
   margin: 0 auto; /* 가운데 정렬 */
+  margin-top: 20px;
 }
 
 /* 각 컬럼 */
@@ -141,8 +144,15 @@ main {
 }
 
 .jajak .song-artist {
-  font-family: "Hakgyo R";
+  font-family: "Hakgyo B";
   color: #fffdd4;
+}
+
+.setlist-link {
+  display: block;
+  width: auto; /* ✅ 이미지 크기 */
+  height: auto;
+  margin: -20px auto; /* ✅ 위아래 여백 */
 }
 
 /* 🟢 팝업 전체 */

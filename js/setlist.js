@@ -1,46 +1,62 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const popup = document.getElementById("popup");
-  const overlay = document.getElementById("popup-overlay");
-  const closeBtn = document.getElementById("popup-close");
+  // 모든 setlist-item을 가져옴
+  let items = document.querySelectorAll(".setlist-item");
 
-  const popupTitle = document.getElementById("popup-title");
-  const popupMeta = document.getElementById("popup-meta");
-  const popupLyrics = document.getElementById("popup-lyrics");
+  // 각 setlist-item 뒤에 link.png 추가 (단, 마지막 곡 '날아올라!' 제외)
+  for (let i = 0; i < items.length - 1; i++) {
+    // "날아올라!"를 제외하고 추가
+    if (items[i].getAttribute("data-title") !== "날아올라!") {
+      let linkImage = document.createElement("img");
+      linkImage.src = "../images/link.png"; // ✅ link.png 경로 설정
+      linkImage.classList.add("setlist-link"); // ✅ CSS 적용을 위해 클래스 추가
 
-  document.querySelectorAll(".setlist-item").forEach((item) => {
+      // 현재 setlist-item의 다음 요소로 추가
+      items[i].parentNode.insertBefore(linkImage, items[i].nextSibling);
+    }
+  }
+
+  // 🟢 팝업 기능 추가
+  let popup = document.getElementById("popup");
+  let popupOverlay = document.getElementById("popup-overlay");
+  let popupTitle = document.getElementById("popup-title");
+  let popupMeta = document.getElementById("popup-meta");
+  let popupDivider = document.getElementById("popup-divider");
+  let popupLyrics = document.getElementById("popup-lyrics");
+  let closeButton = document.getElementById("popup-close");
+
+  // 모든 setlist-item에 클릭 이벤트 추가
+  items.forEach((item) => {
     item.addEventListener("click", function () {
-      // ✅ 클릭한 곡의 데이터 가져오기
-      const title = this.getAttribute("data-title");
-      const meta = this.getAttribute("data-meta");
-      const lyrics = this.getAttribute("data-lyrics");
-      const customClass = this.getAttribute("data-class"); // ✅ 추가
+      let title = item.getAttribute("data-title");
+      let meta = item.getAttribute("data-meta");
+      let lyrics = item.getAttribute("data-lyrics");
+      let extraClass = item.getAttribute("data-class");
 
-      // ✅ 팝업 내용 변경
-      popupTitle.innerHTML = `<h2>${title}</h2>`;
+      // 제목 설정
+      popupTitle.innerHTML = title;
+      popupTitle.className = extraClass ? extraClass : "";
+
+      // 작사/작곡 정보 설정
       popupMeta.innerHTML = meta;
+
+      // 가사 설정
       popupLyrics.innerHTML = lyrics;
 
-      // ✅ 기존 클래스 제거 후 새로운 클래스 적용
-      popup.classList.remove("small-title"); // 기존 클래스 제거
-      if (customClass) {
-        popup.classList.add(customClass); // 새로운 클래스 추가
-      }
-
-      // ✅ 팝업 띄우기
-      popup.style.display = "block";
-      overlay.style.display = "block";
+      // 팝업 띄우기
+      popup.style.display = "flex";
+      popupOverlay.style.display = "block";
     });
   });
 
-  // X 버튼 클릭 시 팝업 닫기
-  closeBtn.addEventListener("click", function () {
+  // 닫기 버튼 이벤트 추가
+  closeButton.addEventListener("click", function () {
     popup.style.display = "none";
-    overlay.style.display = "none";
+    popupOverlay.style.display = "none";
   });
 
-  // 배경 클릭 시 팝업 닫기
-  overlay.addEventListener("click", function () {
+  // 팝업 바깥 클릭 시 닫기
+  popupOverlay.addEventListener("click", function () {
     popup.style.display = "none";
-    overlay.style.display = "none";
+    popupOverlay.style.display = "none";
   });
 });
