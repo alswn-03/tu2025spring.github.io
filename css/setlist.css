@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+
 @font-face {
   font-family: "Hakgyo B";
   src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ B.otf) format("opentype");
@@ -7,6 +9,15 @@
   font-family: "Hakgyo R";
   src: url(../TU-2025-Spring/fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
     format("opentype");
+}
+
+/* 스크롤 시 상단바 & 하단바를 침범하지 않도록 설정 */
+main {
+  position: absolute;
+  top: 60px; /* ✅ 상단바(헤더) 높이만큼 아래로 이동 */
+  bottom: 50px; /* ✅ 하단바(푸터) 높이만큼 위로 이동 */
+  width: 100%;
+  overflow-y: auto; /* ✅ main 안에서만 스크롤 가능하도록 설정 */
 }
 
 /* 설명 문구 스타일 */
@@ -23,7 +34,6 @@
   letter-spacing: 20%; /* 문자 간격 20% */
 }
 
-/* Setlist 전체 컨테이너 */
 /* Setlist 전체 컨테이너 */
 .setlist-container {
   display: grid;
@@ -45,10 +55,13 @@
 
 /* 제목 스타일 */
 .setlist-column h2 {
-  font-size: 16px;
+  font-family: "Hakgyo B";
+  font-size: 10px;
+  letter-spacing: 1px;
   color: #df253a;
   border-bottom: 2px solid #df253a;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
+  margin: -10px;
   width: 100%;
   text-align: center;
 }
@@ -56,7 +69,7 @@
 /* 개별 아이템 (노래 정보) */
 .setlist-item {
   width: 100%;
-  height: auto;
+  min-height: 80px;
   border: 2px solid #df253a;
   padding: 10px; /* ✅ 박스 내부 여백 동일하게 설정 */
   background-color: #fffdd4;
@@ -67,27 +80,28 @@
   justify-content: space-between; /* ✅ 상단 제목과 하단 내용을 동일하게 정렬 */
 }
 
+.jajak {
+  background-color: #df253a;
+}
+
 /* 제목 (좌측 상단) */
 .song-title {
   font-family: "Hakgyo R";
   font-size: 18px;
   color: #df253a;
   text-align: left;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   margin: 0;
   padding-left: 0px; /* ✅ 좌측 모서리와 간격 */
   padding-bottom: 22px; /* ✅ 상단 모서리와 간격 */
 }
 
-.song-title-goodOld {
-  font-family: "Hakgyo R";
-  font-size: 9px;
-  color: #df253a;
-  text-align: left;
-  letter-spacing: 1px;
-  margin: 0;
-  padding-left: 0px; /* ✅ 좌측 모서리와 간격 */
-  padding-bottom: 22px; /* ✅ 상단 모서리와 간격 */
+.jajak .song-title {
+  color: #fffdd4;
+}
+
+.goodOld {
+  font-size: clamp(9px, 2vw, 18px);
 }
 
 /* 하단 정보 영역 */
@@ -110,6 +124,10 @@
   padding-bottom: 0px; /* ✅ 하단 모서리와 간격 */
 }
 
+.jajak .song-number {
+  color: #fffdd4;
+}
+
 /* 가수 이름 (우측 하단) */
 .song-artist {
   font-family: "Hakgyo B";
@@ -120,4 +138,90 @@
   margin: 0;
   padding-right: 0px; /* ✅ 우측 모서리와 간격 */
   padding-bottom: 0px; /* ✅ 하단 모서리와 간격 */
+}
+
+.jajak .song-artist {
+  font-family: "Hakgyo R";
+  color: #fffdd4;
+}
+
+/* 🟢 팝업 전체 */
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw; /* 반응형 */
+  max-width: 400px;
+  height: 70vh;
+  max-height: 600px;
+  background: #fffde4;
+  padding: 20px;
+  border: 2px solid #df253a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+#popup,
+#popup-overlay {
+  display: none;
+}
+
+/* 🟡 팝업 닫기 버튼 (X) */
+#popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px; /* X 아이콘 크기 */
+  height: auto;
+  cursor: pointer;
+}
+
+/* 🟡 팝업 내부 그리드 */
+#popup-container {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr; /* ✅ 마지막 영역은 스크롤 가능 */
+  gap: 10px;
+  height: 100%;
+}
+
+/* 🟡 제목 스타일 */
+#popup-title {
+  font-family: "Hakgyo R";
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: -15px;
+}
+
+/* 🟡 작곡/작사 정보 */
+#popup-meta {
+  font-family: "Hakgyo B";
+  font-size: 6px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  background: #fffde4;
+  border-radius: 5px;
+}
+
+/* 🟡 중간 구분선 */
+#popup-divider {
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+
+/* 🟡 가사 (스크롤 가능) */
+#popup-lyrics {
+  font-family: "Hakgyo R";
+  font-size: 10px;
+  text-align: left;
+  overflow-y: auto; /* ✅ 스크롤 가능 */
+  max-height: 50vh; /* ✅ 필요시 높이 조정 */
+  padding-right: 5px;
 }
