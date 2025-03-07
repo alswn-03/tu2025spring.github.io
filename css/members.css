@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Hakgyo R";
+  src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf) format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Hahmlet:wght@100..900&display=swap');
+
+main {
+  position: fixed;
+  top: 60px;
+  overflow-x: scroll;
+}
+
+#blur-poster{
+  filter: sepia(50%) blur(15px);
+}
+
+
+.members-description > h3 {
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  font-family: "Hakgyo R";
+  /* font-family: "Hahmlet";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; */
+
+  text-align: center;
+  font-size: 13px;
+}
+
+
+.members-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 9px;
+  margin-right: 9px;  
+}
+
+.members-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 82px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 12px;
+    margin-bottom: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #000; 
+}
+
+.member-name {
+  font: 12.5px "Hakgyo R";
+  font-weight: 700;
+  margin-left: 1px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+.member-comment {
+  font: 11.5px "Hakgyo R";
+  letter-spacing: 1px;
+  margin: 0px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
