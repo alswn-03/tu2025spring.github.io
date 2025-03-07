@@ -79,6 +79,17 @@
   padding-bottom: 22px; /* ✅ 상단 모서리와 간격 */
 }
 
+.song-title-goodOld {
+  font-family: "Hakgyo R";
+  font-size: 9px;
+  color: #df253a;
+  text-align: left;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-left: 0px; /* ✅ 좌측 모서리와 간격 */
+  padding-bottom: 22px; /* ✅ 상단 모서리와 간격 */
+}
+
 /* 하단 정보 영역 */
 .song-info {
   display: flex;
