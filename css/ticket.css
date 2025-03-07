@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "Hakgyo R";
+  src: url(../TU-2025-Spring/fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
+    format("opentype");
+}
+
+.ticket-link {
+    margin: 0 auto; /* 좌우 중앙 정렬 */
+
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    width: 190px;
+    height: 35px;   
+}
+.ticket-link a {
+    font: 15px "Hakgyo R";
+    font-weight: 700;
+    color:black;
+    text-decoration: none; /* 기본 링크 밑줄 제거 */
+    text-align: center;
+}
+
+#kakao {
+    margin-top: 110px;
+    background-color:#fffdd4;;
+}
+#reservation {
+    margin-top: 60px;
+    background-color:#fffdd4;;
+}
+#recruit {
+    margin-top: 60px;
+    background-color:#fffdd4;;
+}
