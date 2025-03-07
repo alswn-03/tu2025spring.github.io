@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Hakgyo B";
+  src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ B.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Hakgyo R";
+  src: url(../TU-2025-Spring/fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
+    format("opentype");
+}
+
+/* 설명 문구 스타일 */
+.setlist-description {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  font-family: "Hakgyo R";
+  font-size: 10px; /* 글씨 크기 조정 */
+  color: black; /* 기존 빨간 계열 색상 */
+  margin-top: 10px; /* 위쪽 빨간 바에서 10px 아래로 내림 */
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 30px; /* 필요하면 높이 조정 */
+  letter-spacing: 20%; /* 문자 간격 20% */
+}
+
+/* Setlist 전체 컨테이너 */
+/* Setlist 전체 컨테이너 */
+.setlist-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ✅ 2개의 열로 배치 */
+  gap: 23px; /* 컬럼 간 간격 */
+  max-width: 90vw; /* 전체 너비 조정 */
+  margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 각 컬럼 */
+.setlist-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px; /* 각 곡 간 간격 */
+  width: 100%;
+  height: 58px;
+}
+
+/* 제목 스타일 */
+.setlist-column h2 {
+  font-size: 16px;
+  color: #df253a;
+  border-bottom: 2px solid #df253a;
+  padding-bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* 개별 아이템 (노래 정보) */
+.setlist-item {
+  width: 100%;
+  height: auto;
+  border: 2px solid #df253a;
+  padding: 10px; /* ✅ 박스 내부 여백 동일하게 설정 */
+  background-color: #fffdd4;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ✅ 상단 제목과 하단 내용을 동일하게 정렬 */
+}
+
+/* 제목 (좌측 상단) */
+.song-title {
+  font-family: "Hakgyo R";
+  font-size: 18px;
+  color: #df253a;
+  text-align: left;
+  letter-spacing: 2px;
+  margin: 0;
+  padding-left: 0px; /* ✅ 좌측 모서리와 간격 */
+  padding-bottom: 22px; /* ✅ 상단 모서리와 간격 */
+}
+
+.song-title-goodOld {
+  font-family: "Hakgyo R";
+  font-size: 9px;
+  color: #df253a;
+  text-align: left;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-left: 0px; /* ✅ 좌측 모서리와 간격 */
+  padding-bottom: 22px; /* ✅ 상단 모서리와 간격 */
+}
+
+/* 하단 정보 영역 */
+.song-info {
+  display: flex;
+  justify-content: space-between; /* 좌우 정렬 */
+  width: 100%;
+  padding: 0px; /* ✅ 하단 여백 동일하게 조정 */
+}
+
+/* 곡 번호 (좌측 하단) */
+.song-number {
+  font-family: "Hakgyo B";
+  font-size: 9px;
+  color: #df253a;
+  text-align: left;
+  letter-spacing: 1.5px;
+  margin: 0;
+  padding-left: 0px; /* ✅ 좌측 모서리와 간격 */
+  padding-bottom: 0px; /* ✅ 하단 모서리와 간격 */
+}
+
+/* 가수 이름 (우측 하단) */
+.song-artist {
+  font-family: "Hakgyo B";
+  font-size: 9px;
+  color: #df253a;
+  text-align: right;
+  letter-spacing: 1.5px;
+  margin: 0;
+  padding-right: 0px; /* ✅ 우측 모서리와 간격 */
+  padding-bottom: 0px; /* ✅ 하단 모서리와 간격 */
+}
