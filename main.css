@@ -17,8 +17,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 95vw;
-  max-height: calc(100vh - 110px);
+  width: 90vw;
+  /* max-height: calc(100vh - 110px); */
   transform: translate(-50%, -50%) translateY(5px);
   z-index: -1;
 }
@@ -26,8 +26,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 95vw;
-  max-height: calc(100vh - 110px);
+  width: 90vw;
+  /* max-height: calc(100vh - 110px); */
   transform: translate(-50%, -50%) translateY(5px);
   filter: blur(7.5px);
   z-index: -1;
@@ -123,6 +123,14 @@ header {
   display: flex;
   justify-content: center; /* 가로 중앙 정렬 */
   align-items: center; /* 세로 중앙 정렬 */
+}
+#instagram {
+  position: relative;
+  left: 12px;
+}
+#backhome {
+  position: relative;
+  left: 92px;
 }
 
 main {
