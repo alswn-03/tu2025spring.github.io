@@ -9,6 +9,9 @@
   src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf) format("opentype");
 }
 
+#blur-poster{
+  filter: sepia(50%) blur(15px);
+}
 
 /* 스크롤 시 상단바 & 하단바를 침범하지 않도록 설정 */
 main {
