@@ -81,7 +81,7 @@
       function copyOnClick(event) {
             const text = event.target.innerText;
             navigator.clipboard.writeText(text).then(() => {
-                alert("텍스트가 복사되었습니다: " + text);
+                alert("복사: " + text);
             }).catch(err => {
                 console.error("복사 실패:", err);
             });
