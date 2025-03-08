@@ -41,54 +41,54 @@
         </div>
       </div> 
     </nav> 
-
+    
     <main>
-        <!-- 📌 탭 메뉴 -->
-        <div class="tab-menu">
-          <button class="tab-button active" data-tab="info">공연 정보</button>
-          <button class="tab-button" data-tab="location">오시는 길</button>
-          <button class="tab-button" data-tab="notice">주의 사항</button>
+      <!-- 📌 탭 메뉴 -->
+      <div class="tab-menu">
+        <button class="tab-button active" data-tab="info">공연 정보</button>
+        <button class="tab-button" data-tab="location">오시는 길</button>
+        <button class="tab-button" data-tab="notice">주의 사항</button>
+      </div>
+
+      <!-- 📌 탭 내용 -->
+      <div id="tab-content">
+        <div class="tab-pane active" id="info">
+          <img src="/images/poster.jpg" class="poster">
+          <div class="info-text">
+            <p><strong>연출</strong> | 김윤성 성연우 이민규</p>
+            <p><strong>출연</strong> | 곽민서 외 31명</p>
+            <p><strong>진행</strong> | 이민규</p>
+            <p><strong>포스터</strong> | 곽민서 선율 성연우</p>
+            <p><strong>웹디자인</strong> | 김윤성 신한명 장민주</p>
+            <p><strong>영상촬영</strong> | -</p>
+            <p><strong>후원</strong> | ST MUSIC BAND</p>
+          </div>
+          <p class="desc">홍익대학교 중앙 창작곡 밴드 동아리 (뚜라미)의 2025년 봄 정기 공연에 여러분을 초대합니다.</p>
         </div>
 
-        <!-- 📌 탭 내용 -->
-        <div id="tab-content">
-          <div class="tab-pane active" id="info">
-            <img src="/images/poster.jpg" class="poster">
-            <div class="info-text">
-              <p><strong>연출</strong> | 김윤성 성연우 이민규</p>
-              <p><strong>출연</strong> | 곽민서 외 31명</p>
-              <p><strong>진행</strong> | 이민규</p>
-              <p><strong>포스터</strong> | 곽민서 선율 성연우</p>
-              <p><strong>웹디자인</strong> | 김윤성 신한명 장민주</p>
-              <p><strong>영상촬영</strong> | -</p>
-              <p><strong>후원</strong> | ST MUSIC BAND</p>
-            </div>
-            <p class="desc">홍익대학교 중앙 창작곡 밴드 동아리 (뚜라미)의 2025년 봄 정기 공연에 여러분을 초대합니다.</p>
-          </div>
-
-          <div class="tab-pane" id="location">
-              <h3>힙정 라디오가</h3>
-              <p>(서울 마포구 양화로 12길 54 지하홀)</p>
-              <div class="map-placeholder">지도 넣을 예정</div>
-          </div>
-
-          <div class="tab-pane" id="notice">
-              <h3>공연장 주의사항</h3>
-              <ol>
-                <li>공연장 질서 유지 - 공연 관람 시 자리 이동을 삼가주세요.</li>
-                <li>공연장 내 촬영 및 음주 금지 - 출연진 보호를 위해 공연장 내 촬영 및 음주가 금지됩니다.</li>
-                <li>교통 안내 - 공연장 내 주차 공간이 협소하므로 대중교통 이용을 권장합니다.</li>
-              </ol>
-              <h4>📌 공연 대표자 비상 연락망</h4>
-              <ul>
-                <li>신한영: 010-4534-3216</li>
-                <li>김리율: 010-2490-4649</li>
-                <li>김윤성: 010-3484-4665</li>
-                <li>성연우: 010-8855-1968</li>
-                <li>이민규: 010-5918-5967</li>
-              </ul>
-          </div>
+        <div class="tab-pane" id="location">
+            <h3>힙정 라디오가</h3>
+            <p>(서울 마포구 양화로 12길 54 지하홀)</p>
+            <div class="map-placeholder">지도 넣을 예정</div>
         </div>
+
+        <div class="tab-pane" id="notice">
+            <h3>공연장 주의사항</h3>
+            <ol>
+              <li>공연장 질서 유지 - 공연 관람 시 자리 이동을 삼가주세요.</li>
+              <li>공연장 내 촬영 및 음주 금지 - 출연진 보호를 위해 공연장 내 촬영 및 음주가 금지됩니다.</li>
+              <li>교통 안내 - 공연장 내 주차 공간이 협소하므로 대중교통 이용을 권장합니다.</li>
+            </ol>
+            <h4>📌 공연 대표자 비상 연락망</h4>
+            <ul>
+              <li>신한영: 010-4534-3216</li>
+              <li>김리율: 010-2490-4649</li>
+              <li>김윤성: 010-3484-4665</li>
+              <li>성연우: 010-8855-1968</li>
+              <li>이민규: 010-5918-5967</li>
+            </ul>
+        </div>
+      </div>
     </main>
 
 
@@ -97,6 +97,9 @@
       <p>Copyright(c) 2025 TURAMI, Hongik University. ALL RIGHTS RESERVED.</p>
     </footer>
     
+
+    
+
     <script>
       // hamburger 버튼 누르기
       document.getElementsByClassName('navbar-toggler')
@@ -105,26 +108,16 @@
         document.getElementsByClassName('navbar')[0].style.display='flex';
       })
 
-      // navbar.html footer,html 불러오기
-      function loadComponent(id, file) {
-        fetch(file)
-          .then(response => response.text())
-          .then(data => document.getElementById(id).innerHTML = data);
-      }
-      loadComponent("navbar-placeholder", "navbar.html");
-      loadComponent("footer-placeholder", "footer.html");
+      // 탭 기능 추가
+      document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', function() {
+          document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+          document.querySelectorAll('.tab-pane').forEach(tab => tab.classList.remove('active'));
 
-        // 탭 기능 추가
-        document.querySelectorAll('.tab-button').forEach(button => {
-          button.addEventListener('click', function() {
-           document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-           document.querySelectorAll('.tab-pane').forEach(tab => tab.classList.remove('active'));
-
-          this.classList.add('active');
-          document.getElementById(this.dataset.tab).classList.add('active');
-          });
+        this.classList.add('active');
+        document.getElementById(this.dataset.tab).classList.add('active');
         });
-
+      });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
