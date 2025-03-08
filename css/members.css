@@ -36,6 +36,7 @@ main {
   grid-template-columns: 1fr 1fr;
   margin-left: 9px;
   margin-right: 9px;  
+  margin-bottom: 50px; /*스크롤 겹치는거 방지용*/
 }
 
 .members-card {

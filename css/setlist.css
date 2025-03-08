@@ -47,7 +47,7 @@ main {
   max-width: 90vw; /* 전체 너비 조정 */
   margin: 0 auto; /* 가운데 정렬 */
   margin-top: 20px;
-  margin-bottom: 28px;
+  margin-bottom: 50px;
 }
 
 /* 각 컬럼 */
