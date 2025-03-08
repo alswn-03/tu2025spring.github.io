@@ -29,6 +29,7 @@ main {
   font-size: 13px; /* 글씨 크기 조정 */
   color: black; /* 기존 빨간 계열 색상 */
   margin-top: 10px; /* 위쪽 빨간 바에서 10px 아래로 내림 */
+  margin-bottom: 10px;
   display: flex;
   justify-content: center; /* 가로 중앙 정렬 */
   align-items: center; /* 세로 중앙 정렬 */
@@ -44,6 +45,7 @@ main {
   max-width: 90vw; /* 전체 너비 조정 */
   margin: 0 auto; /* 가운데 정렬 */
   margin-top: 20px;
+  margin-bottom: 28px;
 }
 
 /* 각 컬럼 */
@@ -53,18 +55,20 @@ main {
   align-items: center;
   gap: 28px; /* 각 곡 간 간격 */
   width: 100%;
-  height: 58px;
 }
 
 /* 제목 스타일 */
-.setlist-column h2 {
+.setlist-take {
   font-family: "Hakgyo B";
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
   color: #df253a;
   border-bottom: 2px solid #df253a;
   padding-bottom: 12px;
-  margin: -10px;
+  margin-top: 0px;
+  margin-bottom: -14px;
+  margin-right: -10px;
+  margin-left: -10px;
   width: 100%;
   text-align: center;
 }
@@ -206,7 +210,7 @@ main {
   text-align: center;
   color: #000;
   margin-top: 20px;
-  margin-bottom: -15px;
+  margin-bottom: -10px;
 }
 
 /* 🟡 작곡/작사 정보 */
