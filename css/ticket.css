@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 
 @font-face {
-  font-family: "Hakgyo R";
-  src: url(../TU-2025-Spring/fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
-    format("opentype");
+    font-family: "Hakgyo R";
+    src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf) format("opentype");
 }
 
-/* #blur-poster{
-    filter: sepia(50%) blur(15px);
-} */
 
-.ticket-link {
+#blur-poster {
+    width: 100%;
+    filter: sepia(50%) blur(20px);
+}
+
+.tu-recruit {
     margin: 0 auto; /* 좌우 중앙 정렬 */
 
     display: flex; 
@@ -18,26 +19,74 @@
     justify-content: center;
 
     padding: 0;
-    width: 190px;
-    height: 35px;   
+    width: 240px;
+    height: 40px;   
 }
-.ticket-link a {
-    font: 15px "Hakgyo R";
+.tu-recruit a {
+    font: 18px "Hakgyo R";
     font-weight: 700;
-    color:black;
+    /* color:black; */
+    color: #fffdd4;
     text-decoration: none; /* 기본 링크 밑줄 제거 */
     text-align: center;
 }
 
+.tu-ticket {
+    margin: 0 auto; /* 좌우 중앙 정렬 */
+
+    display: block;
+
+    padding: 0;
+    width: 240px;
+}
+.tu-ticket p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding-top: 10px;
+    margin-right: auto;
+    margin-bottom: 8px;
+    margin-left: auto;
+    height: 40px;
+
+    font: 18px "Hakgyo R";
+    font-weight: 700;
+    color:black;
+}
+.ticket-info {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    width: 240px;
+
+    font: 13px "Hakgyo R";
+    font-weight: 100;
+    line-height: 20px;  
+    color:black;
+}
+#ticket-account {
+    font: 13px "Hakgyo R";
+    font-weight: 200;
+    line-height: 18px; 
+    margin: 0;
+    padding: 0;
+}
+
+
+#recruit {
+    margin-top: 120px;
+    /* background-color:#fffdd4;; */
+    background-color: #df253a;
+
+}
 #kakao {
-    margin-top: 75px;
+    margin-top: 50px;
     background-color:#fffdd4;;
 }
-#reservation {
+/* #reservation {
     margin-top: 60px;
     background-color:#fffdd4;;
-}
-#recruit {
-    margin-top: 125px;
-    background-color:#fffdd4;;
-}
+} */
