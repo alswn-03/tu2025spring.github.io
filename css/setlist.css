@@ -4,12 +4,11 @@
   font-family: "Hakgyo B";
   src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ B.otf) format("opentype");
 }
-
 @font-face {
   font-family: "Hakgyo R";
-  src: url(../TU-2025-Spring/fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf)
-    format("opentype");
+  src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf) format("opentype");
 }
+
 
 /* 스크롤 시 상단바 & 하단바를 침범하지 않도록 설정 */
 main {
