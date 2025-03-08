@@ -108,6 +108,13 @@
     width: 295px;
     border: 1.0px solid  #fffdd4; 
 }
+.content2-1 {
+    margin-top: 25px;
+    font: 12px "Hakgyo R";
+    font-weight: 400;
+    letter-spacing: 0.7px; 
+    line-height: 20px;  
+}
 
 /* content3  */
 .content3 {    
