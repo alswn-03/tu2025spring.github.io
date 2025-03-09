@@ -9,7 +9,7 @@
   src: url(../fonts/Hakgyoansim\ Allimjang\ OTF\ R.otf) format("opentype");
 }
 
-#blur-poster{
+#blur-poster {
   filter: sepia(50%) blur(15px);
 }
 
@@ -218,7 +218,7 @@ main {
 /* 🟡 작곡/작사 정보 */
 #popup-meta {
   font-family: "Hakgyo B";
-  font-size: 6px;
+  font-size: 7px;
   letter-spacing: 1.5px;
   text-align: center;
   background: #fffde4;
